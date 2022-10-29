@@ -1866,18 +1866,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/syndpdevscogro')]",
-			"type": "Microsoft.Synapse/workspaces/sqlPools",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"collation": "SQL_Latin1_General_CP1_CI_AS",
-				"maxSizeBytes": 263882790666240,
-				"annotations": []
-			},
-			"dependsOn": [],
-			"location": "westus"
-		},
-		{
 			"name": "[concat(parameters('workspaceName'), '/synspdevscogro')]",
 			"type": "Microsoft.Synapse/workspaces/bigDataPools",
 			"apiVersion": "2019-06-01-preview",
@@ -1897,26 +1885,38 @@
 				"sparkVersion": "2.4",
 				"libraryRequirements": {
 					"content": "opencensus==0.7.13\r\n",
-					"filename": "requirements.txt",
-					"time": "2022-10-26T21:15:32.4316329Z"
+					"filename": "/home/vsts/work/1/ciartifacts/synapse_pool_requirements/requirements.txt",
+					"time": "2022-10-28T23:52:21.7832314Z"
 				},
 				"isComputeIsolationEnabled": false,
 				"sparkConfigProperties": {
 					"configurationType": "File",
 					"filename": "spark_loganalytics_conf.txt",
 					"content": "spark.synapse.logAnalytics.enabled true\r\nspark.synapse.logAnalytics.workspaceId 74ebfc3d-fbd7-4d81-b481-bf031425fdc6\r\nspark.synapse.logAnalytics.secret BHOaurvnIHy1FOsPit+rX8MDY4+HjZxfOz0scwCqIre/qNbCmeAHKeeqPbQGjYtTogL9HGdhYPxyzC4x7FdRGw==",
-					"time": "2022-10-26T21:15:32.4316329Z"
+					"time": "2022-10-28T23:52:21.7832314Z"
 				},
 				"sessionLevelPackagesEnabled": true,
 				"customLibraries": [
 					{
-						"name": "ddo_transform-localdev-py2.py3-none-any.whl",
-						"path": "sywsdevscogro/libraries/ddo_transform-localdev-py2.py3-none-any.whl",
+						"name": "ddo_transform-1.1.42-py2.py3-none-any.whl",
+						"path": "sywsdevscogro/libraries/ddo_transform-1.1.42-py2.py3-none-any.whl",
 						"containerName": "prep",
-						"uploadedTimestamp": "0001-01-01T00:00:00+00:00",
+						"uploadedTimestamp": "2022-10-28T23:41:27.189857+00:00",
 						"type": "whl"
 					}
 				],
+				"annotations": []
+			},
+			"dependsOn": [],
+			"location": "westus"
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/syndpdevscogro')]",
+			"type": "Microsoft.Synapse/workspaces/sqlPools",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"collation": "SQL_Latin1_General_CP1_CI_AS",
+				"maxSizeBytes": 263882790666240,
 				"annotations": []
 			},
 			"dependsOn": [],
